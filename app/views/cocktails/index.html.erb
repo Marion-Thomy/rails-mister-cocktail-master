@@ -1,0 +1,12 @@
+<div class="container-md">
+  <h1>Les cocktails de Marion</h1>
+  <hr>
+  <ul>
+    <% @cocktails.each do |cocktail| %>
+      <li><%= link_to cocktail.name.capitalize, cocktail_path(cocktail.id) %></li>
+    <% end %>
+  </ul>
+  <hr>
+  <%= link_to "Add a cocktail", new_cocktail_path %>
+</div>
+
